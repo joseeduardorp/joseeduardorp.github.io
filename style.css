@@ -1,0 +1,184 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Helvetica, sans-serif;
+}
+
+.container {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: lightgray;
+    position: relative;
+}
+
+/*  */
+header {
+    padding: 20px;
+    background-color: #87431d;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    color: white;
+}
+
+section {
+    margin-top: 15px;
+}
+
+/* Presilha da prancheta */
+section::before,
+section::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section::before {
+    width: 45px;
+    height: 45px;
+    background-color: grey;
+    border-radius: 50%;
+    top: 80px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .4);
+}
+
+section::after {
+    width: 130px;
+    height: 45px;
+    background-color: grey;
+    top: 105px;
+}
+
+/* Prancheta e papel para adicionar suas tarefas */
+.clipboard {
+    margin: auto;
+    padding: 20px;
+    max-width: min(400px, 90vw);
+    height: min(465px, 75vh);
+    background-color: rgb(167, 109, 23);
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .4);
+}
+
+.paper {
+    padding: 15px;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Campo para adicionar novas tarefas */
+.input-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: min(240px, 55vw);
+    background: none;
+    border: none;
+    border-bottom: 4px solid black;
+    outline: none;
+    font-size: 20px;
+}
+
+#btn-add {
+    /* padding: 5px; */
+    width: 38px;
+    height: 38px;
+    background: none;
+    border: 4px solid black;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-add:hover {
+    background-color: black;
+    color: white;
+    transition-duration: .4s;
+    cursor: pointer;
+}
+
+/* Lista de Tarefas */ 
+ul {
+    margin-top: 30px;
+    height: 350px;
+    overflow: auto;
+}
+
+li {
+    margin-right: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    list-style: none;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+label:hover,
+input[type="checkbox"]:hover {
+    transition-duration: .4s;
+    cursor: pointer;
+}
+
+/* Scroll Bar da lista de tarefas */
+ul::-webkit-scrollbar {
+    width: 3px;
+}
+
+ul::-webkit-scrollbar-track {
+    background-color: #dadada;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+    background-color: #999999;
+}
+
+/* Botão de apagar terefa */
+#btn-del {
+    margin-left: 5px;
+    background: none;
+    border: none;
+    font-size: 1.7rem;
+    opacity: .2;
+}
+
+#btn-del:hover {
+    opacity: 1;
+    transition-duration: .4s;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    opacity: .6;
+    font-size: 12px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(0, 76, 148);
+}

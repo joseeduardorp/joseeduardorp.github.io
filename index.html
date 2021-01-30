@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> To do List </title>
+    <script src="https://kit.fontawesome.com/a44afddbfa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1> To Do List </h1>
+    </header>
+
+    <section>
+        <div class="clipboard">
+            <div class="paper">
+                <div class="input-field">
+                    <input type="text" id="task-input" placeholder="Nova tarefa" autofocus>
+                    <button id="btn-add" onclick="addTask()"> <i class="fas fa-plus"></i> </button>
+                </div>
+
+                <ul id="task-list">
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/joseeduardorp" target="_blanck">José Eduardo</a></p>
+    </footer>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
